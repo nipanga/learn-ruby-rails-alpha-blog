@@ -1,5 +1,7 @@
 class User < ApplicationRecord
 
+  has_secure_password
+
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
 
@@ -16,5 +18,4 @@ class User < ApplicationRecord
     self.email = email.downcase
   }
 
-  
 end
